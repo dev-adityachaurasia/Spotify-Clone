@@ -1,0 +1,59 @@
+.flex{
+    display: flex;
+}
+.gap{
+    gap: 0.4rem;
+}
+.justift-content{
+    justify-content: center;
+}
+.align-items{
+    align-items: center;
+}
+.red-border{
+    border: 2px solid red;
+}
+.black-border{
+    border: 2px solid black;
+}
+.border{
+    /* width: 100%; */
+    margin: 0.5rem;
+    border: none;
+    background: #121212 ;
+    border-radius: 0.5rem;
+}
+.interit{
+    height: 74%;
+}
+li{
+    padding-bottom: 1rem;
+}
+.fontlight{
+    font-family: spotifylight;
+}
+.btn{
+    background-color: #fff;
+    color: black;
+    border: none;
+    padding: 0.8rem 1.7rem ;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition:  all 100ms;
+}
+.right .nav .login-signup .btn:hover{
+    transform: scale(1.1);
+}
+.btn-none{
+    border: none;
+    background:none;
+    cursor: pointer;
+    color: #5a5a5a;
+}
+.btn-none:hover{
+    color: #fff;
+    transform: scale(1.1);
+}
+::-webkit-scrollbar{
+    width: 0px;
+}

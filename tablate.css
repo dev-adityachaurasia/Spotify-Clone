@@ -1,0 +1,34 @@
+@media screen and (max-width:1480px){
+    .left{
+        width: 28vw;
+    }
+    .right{
+        width: 72vw;
+    }
+}
+@media screen and (max-width:1200px){
+    .left{
+        width: 35vw;
+    }
+    .right{
+        width: 65vw;
+    }
+    .cardsPlaylist{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    
+}
+@media screen and (max-width:1050px){
+    .left{
+        width: 40vw;
+    }
+    .right{
+        width: 60vw;
+    }
+    .cardsPlaylist{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    
+}

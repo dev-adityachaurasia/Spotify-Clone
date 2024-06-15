@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify-Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="tablate.css">
+    <link rel="stylesheet" href="mobile.css ">
+</head>
+<body class="flex">
+    <div class="left ">
+        <img id="cross" src="Icons/cross.svg" alt="">
+        <div class="home border">
+                <img  class="logo" src="Icons/logo.svg" alt="">   
+                <ul>
+                    <li><img src="Icons/home.svg" alt="">Home</li>
+                    <li><img src="Icons/search.svg" alt="">Search</li>
+                </ul>
+        </div>
+        <div class="library border interit">
+            <ul>
+                <li><img src="Icons/lib.svg" alt="">Your Library</li>
+                <img src="Icons/plus.svg" alt="">
+            </ul>
+            <div class="libList">
+                <ol>
+                </ol>
+            </div>
+            <div class="left-foot">
+                <div><a href="https://www.spotify.com/in-en/legal/">Legal</a></div>
+                <div><a href="https://www.spotify.com/in-en/safetyandprivacy/">Safety & Privacy Center</a></div>
+                <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a></div>
+                <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a></div>
+                <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a></div>
+                <div><a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a></div>
+                <div><a href="https://www.spotify.com/legal/cookies-policy/" >Cookies</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="nav flex">
+            <div class="back-controler">
+                <img id="more" src="Icons/more.svg" alt="">
+                <img class="arrow-left" src="Icons/arrow-left.svg" alt="">
+                <img class="arrow-right" src="Icons/arrow-right.svg" alt="">
+            </div>
+            <div class="login-signup ">
+                <button class="btn-none">Sign up</button>
+                <button class="btn">Log in</button>
+            </div>
+        </div>
+        <div  class="songPlaylist">
+            <div class="spotifyPlaylist-top">
+                <h2>Spotify Playlist</h2>
+                <button class="btn-none">Show all</button>
+            </div>    
+            <div id="allCards" class="cardsPlaylist">
+                <div class="card">
+                    <img class="play" src="Icons/play.svg" alt="">
+                    <img src="imgAlbum/Dino.jpeg" alt="">
+                    <h4>Dino</h4>
+                    <p>Let Boost up !!</p>
+                </div>
+                <div class="card">
+                    <img class="play" src="Icons/play.svg" alt="">
+                    <img src="imgAlbum/Mitraz.jpeg" alt="">
+                    <h4>MITRAZ</h4>
+                    <p>Gentle Ambient piano to help you fall asleep. </p>
+                </div>
+                <div class="card">
+                    <img class="play" src="Icons/play.svg" alt="">
+                    <img src="imgAlbum/old.jpeg" alt="">
+                    <h4>Old</h4>
+                    <p>Gentle Ambient piano to help you fall asleep. </p>
+                </div>
+                <div class="card">
+                    <img class="play" src="Icons/play.svg" alt="">
+                    <img src="https://i.scdn.co/image/ab67706f00000002cd17d41419faa97069e06c16" alt="">
+                    <h4>Demo</h4>
+                    <p>Gentle Ambient piano to help you fall asleep. </p>
+                </div>
+            </div>
+        </div>
+        <div class="mainPlaybar">
+            <div id="nowPlaying" class="border">
+                <span>Hancock</span>
+                <p>Artist&nbspName</p>
+            </div>
+            <div class="Playbar">
+                <div id="mover" class="seekBar">
+                    <div id="kuchnhi"></div>
+                    <div id="timeMoving" onclick = "removeClickEvent()" class="seekCircle"></div>
+                    <div id="timeStamp" class="songTime">00:00 / 00:00</div>
+                </div>
+                
+                <div class="coltrolerPlaybar">
+                    <img id="shuffle" height="24px" src="Icons/shuffle.svg" alt="">
+                    <img id="previous" height="24px" style="transform: rotate(180deg);" src="Icons/next.svg" alt="">
+                    <img id="play" height="44px" src="Icons/main-play.svg" alt="">
+                    <img id="next" height="24px" src="Icons/next.svg" alt="">
+                    <img id="loop" height="24px" src="Icons/loop.svg" alt="">
+                </div>
+            </div>
+            <div id="volume" class="volume">
+                <div id="volCir" class="volumeCircle"></div>
+                <div id="kuchbol"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
