@@ -4,13 +4,13 @@ let songs;
 let folder = "Dino";
 let listOfSong;
 getSongs = async()=>{
-let a = await fetch(`http://127.0.0.1:5501/Songs/${folder}/`);
+let a = await fetch(`https://spotifycloneprj.freewebhostmost.com/Songs/${folder}/`); // at https://spotifycloneprj.freewebhostmost.com/ you have to place you hosting name ex. - http://localhost:3000/
 console.log(a);
 let responce = await  a.text();
 console.log(responce);
 let div =document.createElement("div");
 div.innerHTML = responce;
-let elements = await div.querySelectorAll("li a");
+let elements = await div.querySelectorAll("td a");
 let songs = [];
 elements.forEach((a) => {
     let link = a.href;
