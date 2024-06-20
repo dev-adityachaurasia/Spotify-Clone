@@ -4,13 +4,13 @@ let songs;
 let folder = "Dino";
 let listOfSong;
 getSongs = async()=>{
-let a = await fetch(`https://spotifycloneprj.freewebhostmost.com/Songs/${folder}/`); // at https://spotifycloneprj.freewebhostmost.com/ you have to place you hosting name ex. - http://localhost:3000/
-console.log(a);
+let a = await fetch(`http://127.0.0.1:5501/Songs/${folder}/`); // at https://spotifycloneprj.freewebhostmost.com/ you have to place you hosting name ex. - http://localhost:3000/
+// console.log(a);
 let responce = await  a.text();
-console.log(responce);
-let div =document.createElement("div");
+// console.log(responce);
+let div = document.createElement("div");
 div.innerHTML = responce;
-let elements = await div.querySelectorAll("td a");
+let elements = await div.querySelectorAll("li a");
 let songs = [];
 elements.forEach((a) => {
     let link = a.href;
@@ -20,6 +20,24 @@ elements.forEach((a) => {
 });
 return songs;
 };
+
+if(localStorage.getItem('name')){
+    // console.log('Hey');
+    let userName = localStorage.getItem('name')
+    document.querySelector('.login-signup ').innerHTML = `<h3>Hello ${userName} </h3>`
+}
+else{
+
+    let login = document.querySelectorAll("#logIn");
+    login.forEach(function(elem) {
+        elem.addEventListener("click", function() {
+            let userName = prompt('Your Name')
+            localStorage.setItem('name',`${userName}`);
+            document.querySelector('.login-signup ').innerHTML = `<h3>Hello ${userName} </h3>`
+        });
+    });
+}
+
 function secondsToMinutes(seconds) {
     if (isNaN(seconds) || seconds < 0) {
         return "00:00 ";
@@ -53,12 +71,6 @@ let nobhai = ()=>{
                         </div>`;
         listOfSong.append(li);
     }
-
-
-    // 
-
-
-
 
     // 
 
